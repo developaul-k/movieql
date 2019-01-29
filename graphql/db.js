@@ -81,3 +81,11 @@ export const addMovie = (name, score) => {
 
     return newMovie;
 }
+
+export const modifyMovie = ( id, score ) => {
+    const modifyMovie = movies.filter( movie => movie.id === id );
+
+    modifyMovie[0].score = score;
+
+    return modifyMovie[0];
+}
